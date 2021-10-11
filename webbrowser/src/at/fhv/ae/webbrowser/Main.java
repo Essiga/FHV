@@ -5,17 +5,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        Socket s = new Socket("https://www.heise.de/", 80);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please enter the website: ");
+        String domain = sc.nextLine();
+
+
+        Socket s = new Socket(domain, 80);
 
         PrintWriter wtr = new PrintWriter(s.getOutputStream());
 
         //Prints the request string to the output stream
         wtr.println("GET / HTTP/1.0");
-        wtr.println("Host: https://www.heise.de/");
+        wtr.println("Host: "+ domain);
         wtr.println("");
         wtr.flush();
 
