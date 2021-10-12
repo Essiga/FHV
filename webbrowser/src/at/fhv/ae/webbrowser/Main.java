@@ -5,28 +5,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.URL;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
         System.out.print("Please enter the website: ");
-        String domain = sc.nextLine();
+        String domain = userInput.nextLine();
 
 
-        Socket s = new Socket(domain, 80);
+        Socket socket = new Socket(domain, 80);
 
-        PrintWriter wtr = new PrintWriter(s.getOutputStream());
+        PrintWriter socketOutputStreamWriter = new PrintWriter(socket.getOutputStream());
 
         //Prints the request string to the output stream
-        wtr.println("GET / HTTP/1.0");
-        wtr.println("Host: "+ domain);
-        wtr.println("");
-        wtr.flush();
+        socketOutputStreamWriter.println("GET / HTTP/1.0");
+        socketOutputStreamWriter.println("Host: "+ domain);
+        socketOutputStreamWriter.println("");
+        socketOutputStreamWriter.flush();
 
-        BufferedReader bufRead = new BufferedReader(new InputStreamReader(s.getInputStream()));
+        BufferedReader bufRead = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String outStr;
 
         //Prints each line of the response
@@ -37,7 +38,7 @@ public class Main {
 
         //Closes out buffer and writer
         bufRead.close();
-        wtr.close();
+        socketOutputStreamWriter.close();
 
     }
 }
