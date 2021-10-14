@@ -1,44 +1,82 @@
+/*
+    Author: Adrian Essig
+    Title: Webbrowser
+    Date: 14/10/2021
+
+ */
+
 package at.fhv.ae.webbrowser;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.InetAddress;
 import java.net.Socket;
-import java.net.URL;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner userInput = new Scanner(System.in);
-        System.out.print("Please enter the website: ");
-        String domain = userInput.nextLine();
+        String url = getUrlFromUser();
 
+        String domain = "";
+        String path = "";
+        URLTokenizer urlTokenizer = new URLTokenizer(url);
+        domain = urlTokenizer.getDomain();
+        path = urlTokenizer.getPath();
 
         Socket socket = new Socket(domain, 80);
 
+        BufferedReader response = sendGETRequest(socket, domain, path);
+
+        printResponse(response);
+
+        socket.close();
+
+    }
+
+    public static BufferedReader sendGETRequest(Socket socket, String domain, String path) throws IOException {
+        InetAddress inetAddress = socket.getInetAddress();
+        String ipAddress = inetAddress.toString().split("/")[1];
+        System.out.println("Connecting to Server " + domain + " at " + ipAddress);
+
         PrintWriter socketOutputStreamWriter = new PrintWriter(socket.getOutputStream());
 
-        //Prints the request string to the output stream
-        socketOutputStreamWriter.println("GET / HTTP/1.0");
-        socketOutputStreamWriter.println("Host: "+ domain);
+
+        socketOutputStreamWriter.println("GET /" + path + " HTTP/1.0");
+        socketOutputStreamWriter.println("Host: " + domain);
         socketOutputStreamWriter.println("");
         socketOutputStreamWriter.flush();
 
-        BufferedReader bufRead = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        String outStr;
+        BufferedReader response = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        return response;
 
-        //Prints each line of the response
-        while((outStr = bufRead.readLine()) != null){
-            System.out.println(outStr);
+    }
+
+    public static String getUrlFromUser() {
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Please enter the website: ");
+        String url = userInput.nextLine();
+        return url;
+    }
+
+    public static void printResponse(BufferedReader bufferedInputStream) throws IOException {
+        String socketResponse;
+
+        while ((socketResponse = bufferedInputStream.readLine()) != null) {
+            if (socketResponse.split(" ")[1].equals("200")) {
+                while (!socketResponse.equals("")) {
+                    socketResponse = bufferedInputStream.readLine();
+                }
+            }
+            while ((socketResponse != null)) {
+                System.out.println(socketResponse);
+                socketResponse = bufferedInputStream.readLine();
+            }
         }
 
-
-        //Closes out buffer and writer
-        bufRead.close();
-        socketOutputStreamWriter.close();
-
+        bufferedInputStream.close();
     }
 }
