@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<wetterring-template>
+
+    <update>
+        <datum>18.12.2020</datum>
+        <zeit>14:10</zeit>
+    </update>
+
+    <temperatur>
+        <aktuell>0,0</aktuell>
+        <tag-min>0,0</tag-min>
+        <tag-max>0,0</tag-max>
+	<tag-min-zeit>00:00</tag-min-zeit>
+	<tag-max-zeit>00:00</tag-max-zeit>
+        <monat-min>-0,3</monat-min>
+        <monat-max>2,6</monat-max>
+        <jahr-min>-5,6</jahr-min>
+        <jahr-max>34,9</jahr-max>
+    </temperatur>
+
+    <taupunkt>
+        <aktuell>-60,0</aktuell>
+    </taupunkt>
+
+    <luftdruck>
+        <aktuell>1023,8</aktuell>
+        <tag-min>1023,8</tag-min>
+        <tag-max>1025,7</tag-max>
+	<tag-min-zeit>14:05</tag-min-zeit>
+	<tag-max-zeit>00:15</tag-max-zeit>
+        <tendenz>fallend</tendenz>
+    </luftdruck>
+
+    <luftfeuchtigkeit>
+        <aktuell>0</aktuell>
+        <tag-min>0</tag-min>
+        <tag-max>0</tag-max>
+	<tag-min-zeit>00:00</tag-min-zeit>
+	<tag-max-zeit>00:00</tag-max-zeit>
+    </luftfeuchtigkeit>
+
+    <regen>
+        <rate>0,0</rate>
+        <tag>0,0</tag>
+        <monat>82,6</monat>
+        <jahr>1674,4</jahr>
+    </regen>
+
+    <wind>
+        <geschwindigkeit>
+	    <aktuell-Windboeen>0,0</aktuell-Windboeen>
+	    <aktuell-Wind>0,0</aktuell-Wind>
+            <tag-max>0,0</tag-max>
+	    <tag-max-zeit>00:00</tag-max-zeit>
+            <monat-max>24,1</monat-max>
+            <jahr-max>48,3</jahr-max>
+	    <durchschnitt>0,0</durchschnitt>
+        </geschwindigkeit>
+	    <richtung>NO</richtung>
+    </wind>
+
+    <sonne>
+        <sonnenstunden> </sonnenstunden>
+	<watt-aktuell>--</watt-aktuell>
+	<Sonnenaufgang>--</Sonnenaufgang>
+	<Sonnenzenit>--</Sonnenzenit>
+	<Sonnenuntergang>--</Sonnenuntergang>
+    </sonne>
+
+  	<vorhersage>
+        	<Wettervorhersage>sonnig</Wettervorhersage>
+  	</vorhersage>
+
+  	<mond>
+        	<naechsterVollmond>04:29 30. Dezember 2020</naechsterVollmond>
+  	</mond>
+
+  	<schnee>
+        	<schneefallgrenze>440</schneefallgrenze>
+  	</schnee>
+
+</wetterring-template>
