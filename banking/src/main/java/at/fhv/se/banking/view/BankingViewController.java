@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 
+import at.fhv.se.banking.application.api.CustomerListingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,11 +39,20 @@ public class BankingViewController {
     private static final String ERROR_VIEW = "errorView";
 
     // TODO: inject Application Service Interfaces
+    @Autowired
+    private CustomerListingService customerListingService;
+
+    private BankingViewController(){
+
+    }
 
     @GetMapping(ALL_CUSTOMERS_URL)
     public String allCustomers(Model model) {
         // TODO: make a call to an Application Service to get all Customers
         // TODO: this is fake test data, remove when implementing
+
+
+
         final List<CustomerDTO> customers = Arrays.asList(
             CustomerDTO.builder()
                 .withName("Max Mustermann")
