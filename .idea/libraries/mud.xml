@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mud">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/MUD/src/at/fhv/ae/mud.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
