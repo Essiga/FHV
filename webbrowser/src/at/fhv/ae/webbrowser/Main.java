@@ -61,7 +61,7 @@ public class Main {
         String url = userInput.nextLine();
         return url;
     }
-
+//response.forEach(system.out::println)
     public static void printResponse(BufferedReader bufferedInputStream) throws IOException {
         String socketResponse;
 
