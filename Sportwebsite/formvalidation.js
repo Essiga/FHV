@@ -39,6 +39,7 @@ function validateForm() {
     let passwordRegex = /^[A-Za-z]{1}[A-Za-z0-9_]{6,9}$/;
     let emailRegex = /^[A-Za-z][^-](\.?[\w-]+)*@[^-](([a-zA-Z0-9-])*\.?){1,61}[^.]$/;
 
+
 //  name:[A-Za-z]{1}[^.](\.?[\w-]+)*
 //  @ and subdomain: @([^-][a-zA-Z0-9-.][^-])
 //  name @ and subdomain: [A-Za-z]{1}(\.?[\w-]+)*@[^-]([a-zA-Z0-9-]\.?){3,63}[^-]
