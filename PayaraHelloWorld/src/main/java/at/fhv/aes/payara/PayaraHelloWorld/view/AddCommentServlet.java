@@ -134,22 +134,22 @@ public class AddCommentServlet extends HttpServlet {
                 "            <div class=\"flex space-x-7\">\n" +
                 "                <!-- Website Logo -->\n" +
                 "                <div>\n" +
-                "                    <a href=\"/index.html\" class=\"flex items-center py-4 px-2\">\n" +
-                "                        <img src=\"/pictures/logo.png\" alt=\"Logo\" class=\"h-8 w-8 mr-2\" />\n" +
+                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/index.html\" class=\"flex items-center py-4 px-2\">\n" +
+                "                        <img src=\"/PayaraHelloWorld-1.0-SNAPSHOT/pictures/logo.png\" alt=\"Logo\" class=\"h-8 w-8 mr-2\" />\n" +
                 "                        <span class=\"font-semibold text-gray-500 text-lg\">Navigation</span>\n" +
                 "                    </a>\n" +
                 "                </div>\n" +
                 "                <!-- Primary Navbar items -->\n" +
                 "                <div class=\"flex items-center space-x-1\">\n" +
-                "                    <a href=\"/index.html\" class=\"py-4 px-2 text-gray-100 font-semibold \">Home</a>\n" +
-                "                    <a href=\"/paintball.html\"\n" +
+                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/index.html\" class=\"py-4 px-2 text-gray-100 font-semibold \">Home</a>\n" +
+                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/paintball.html\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Paintball</a>\n" +
-                "                    <a href=\"/schach.html\"\n" +
+                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/schach.html\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Chess</a>\n" +
                 "                </div>\n" +
                 "                <div class=\"flex items-center space-x-1\">\n" +
                 "                    <a href=\"mailto:aes6270@students.fhv.at\"\n" +
-                "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\"><img class=\"h-8 w-8 mr-2\" src=\"/pictures/email.png\" alt=\"email icon\"></a>\n" +
+                "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\"><img class=\"h-8 w-8 mr-2\" src=\"/PayaraHelloWorld-1.0-SNAPSHOT/pictures/email.png\" alt=\"email icon\"></a>\n" +
                 "                </div>\n" +
                 "            </div>\n" +
                 "        </div>\n" +

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="PayaraHelloWorld:war2">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="PayaraHelloWorld_war.war">
+      <element id="artifact" artifact-name="PayaraHelloWorld:war exploded" />
+    </root>
+  </artifact>
+</component>
