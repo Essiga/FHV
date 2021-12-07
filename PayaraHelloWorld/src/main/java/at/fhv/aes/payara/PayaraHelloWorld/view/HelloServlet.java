@@ -23,8 +23,9 @@ public class HelloServlet extends HttpServlet {
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <title>Title</title>\n" +
                 "    <link rel=\"stylesheet\" href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n" +
+                "<script src=\"setcookie.js\"></script>" +
                 "</head>\n" +
-                "<body>\n" +
+                "<body onload=\"setCookie()\">\n" +
                 "\n" +
                 "<!-- comment form -->\n" +
                 "    <div class=\"flex mx-auto items-center justify-center shadow-lg mt-24 mx-8 mb-4 max-w-lg\">\n" +

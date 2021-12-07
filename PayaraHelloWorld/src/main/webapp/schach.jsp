@@ -1,13 +1,29 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.lang.reflect.Array" %><%--
+Created by IntelliJ IDEA.
+User: Adrian
+Date: 25/11/2021
+Time: 20:32
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
+<c:if test="${sessionScope.isLoggedIn == false || sessionScope.isLoggedIn == null}">
+  <c:set var="originalDestination" value="/schach.jsp" scope="session"/>
+  <c:redirect url="login.jsp"/>
+</c:if>
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sportverein - Schach</title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="setcookie.js"></script>
   </head>
-  <body>
+  <body onload="setCookie()">
     <header>
       <nav class="bg-green-400 shadow-lg">
         <div class="max-w-6xl px-4">
@@ -25,7 +41,7 @@
                 <a href="/PayaraHelloWorld-1.0-SNAPSHOT/index.html" class="py-4 px-2 text-gray-100 font-semibold ">Home</a>
                 <a href="/PayaraHelloWorld-1.0-SNAPSHOT/paintball.html"
                   class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300">Paintball</a>
-                <a href="/PayaraHelloWorld-1.0-SNAPSHOT/schach.html"
+                <a href="/PayaraHelloWorld-1.0-SNAPSHOT/schach.jsp"
                   class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300">Chess</a>
               </div>
               <div class="flex items-center space-x-1">

@@ -36,7 +36,8 @@ public class AddCommentServlet extends HttpServlet {
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <title>Title</title>\n" +
                 "    <link rel=\"stylesheet\" href=\"https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css\" rel=\"stylesheet\">\n" +
-                "</head><body>\n"+
+                "<script src=\"setcookie.js\"></script>"+
+                "</head><body onload=\"setCookie()\">\n"+
                 "<nav class=\"bg-green-400 shadow-lg\">\n" +
                 "    <div class=\"max-w-6xl px-4\">\n" +
                 "        <div class=\"flex justify-between\">\n" +
@@ -53,7 +54,7 @@ public class AddCommentServlet extends HttpServlet {
                 "                    <a href=\"/index.html\" class=\"py-4 px-2 text-gray-100 font-semibold \">Home</a>\n" +
                 "                    <a href=\"/paintball.html\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Paintball</a>\n" +
-                "                    <a href=\"/schach.html\"\n" +
+                "                    <a href=\"/schach.jsp\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Chess</a>\n" +
                 "                </div>\n" +
                 "                <div class=\"flex items-center space-x-1\">\n" +
@@ -144,7 +145,7 @@ public class AddCommentServlet extends HttpServlet {
                 "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/index.html\" class=\"py-4 px-2 text-gray-100 font-semibold \">Home</a>\n" +
                 "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/paintball.html\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Paintball</a>\n" +
-                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/schach.html\"\n" +
+                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/schach.jsp\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Chess</a>\n" +
                 "                </div>\n" +
                 "                <div class=\"flex items-center space-x-1\">\n" +

@@ -117,11 +117,11 @@ function validateForm() {
         alert("sports must be filled out");
         return false;
     }
-    if (permissions == ""){
-        doc.reset();
-        alert("permissions must be filled out");
-        return false;
-    }
+    // if (permissions == ""){
+    //     doc.reset();
+    //     alert("permissions must be filled out");
+    //     return false;
+    // }
 
     if (email == ""){
         document.getElementById("email").focus();

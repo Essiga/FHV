@@ -3,7 +3,6 @@ function validateForm() {
     var img = new Image();
     img.src = "/pictures/banana.png";
 
-
     var w = 480, h = 340;
 
 
