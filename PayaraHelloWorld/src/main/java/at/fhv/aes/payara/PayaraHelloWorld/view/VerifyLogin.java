@@ -4,8 +4,7 @@ import at.fhv.aes.payara.PayaraHelloWorld.application.UserServiceImpl;
 import at.fhv.aes.payara.PayaraHelloWorld.application.api.UserService;
 import at.fhv.aes.payara.PayaraHelloWorld.domain.User;
 import at.fhv.aes.payara.PayaraHelloWorld.domain.UserNotFoundException;
-import at.fhv.aes.payara.PayaraHelloWorld.domain.api.UserRepository;
-import at.fhv.aes.payara.PayaraHelloWorld.infrastructure.UserRepositoryImpl;
+
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -20,7 +19,8 @@ import java.util.Optional;
 @WebServlet(name = "verifyLoginServlet", value = "/verify-login-servlet")
 public class VerifyLogin extends HttpServlet {
 
-    private UserService userService = new UserServiceImpl(new UserRepositoryImpl());
+
+    private UserService userService = new UserServiceImpl();
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         ServletContext application = getServletContext();

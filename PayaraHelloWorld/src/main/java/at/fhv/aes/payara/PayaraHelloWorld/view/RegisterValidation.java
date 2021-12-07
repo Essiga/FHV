@@ -3,7 +3,7 @@ package at.fhv.aes.payara.PayaraHelloWorld.view;
 import at.fhv.aes.payara.PayaraHelloWorld.application.UserServiceImpl;
 import at.fhv.aes.payara.PayaraHelloWorld.application.api.UserService;
 import at.fhv.aes.payara.PayaraHelloWorld.domain.User;
-import at.fhv.aes.payara.PayaraHelloWorld.infrastructure.UserRepositoryImpl;
+
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -16,7 +16,8 @@ import java.io.IOException;
 @WebServlet(name = "registerValidationServlet", value = "/register-validation-servlet")
 public class RegisterValidation extends HttpServlet {
 
-    private UserService userService = new UserServiceImpl(new UserRepositoryImpl());
+
+    private UserService userService = new UserServiceImpl();
 
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
         ServletContext application = getServletContext();

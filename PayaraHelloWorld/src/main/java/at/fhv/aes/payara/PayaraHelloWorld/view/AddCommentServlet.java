@@ -52,7 +52,7 @@ public class AddCommentServlet extends HttpServlet {
                 "                <!-- Primary Navbar items -->\n" +
                 "                <div class=\"flex items-center space-x-1\">\n" +
                 "                    <a href=\"/index.html\" class=\"py-4 px-2 text-gray-100 font-semibold \">Home</a>\n" +
-                "                    <a href=\"/paintball.html\"\n" +
+                "                    <a href=\"/paintball.jsp\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Paintball</a>\n" +
                 "                    <a href=\"/schach.jsp\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Chess</a>\n" +
@@ -143,7 +143,7 @@ public class AddCommentServlet extends HttpServlet {
                 "                <!-- Primary Navbar items -->\n" +
                 "                <div class=\"flex items-center space-x-1\">\n" +
                 "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/index.html\" class=\"py-4 px-2 text-gray-100 font-semibold \">Home</a>\n" +
-                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/paintball.html\"\n" +
+                "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/paintball.jsp\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Paintball</a>\n" +
                 "                    <a href=\"/PayaraHelloWorld-1.0-SNAPSHOT/schach.jsp\"\n" +
                 "                       class=\"py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300\">Chess</a>\n" +

@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface CommentRepository {
 
-    public void add(Comment comment);
-    public List<Comment> getAll();
+    void add(Comment comment);
+    List<Comment> getAll();
 }

@@ -36,7 +36,7 @@
                     <!-- Primary Navbar items -->
                     <div class="flex items-center space-x-1">
                         <a href="/PayaraHelloWorld-1.0-SNAPSHOT/index.html" class="py-4 px-2 text-gray-100 font-semibold ">Home</a>
-                        <a href="/PayaraHelloWorld-1.0-SNAPSHOT/paintball.html"
+                        <a href="/PayaraHelloWorld-1.0-SNAPSHOT/paintball.jsp"
                            class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300">Paintball</a>
                         <a href="/PayaraHelloWorld-1.0-SNAPSHOT/schach.html"
                            class="py-4 px-2 text-gray-500 font-semibold hover:text-gray-100 transition duration-300">Chess</a>

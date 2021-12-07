@@ -1,5 +1,19 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.lang.reflect.Array" %><%--
+Created by IntelliJ IDEA.
+User: Adrian
+Date: 25/11/2021
+Time: 20:32
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
+<c:if test="${sessionScope.isLoggedIn == false || sessionScope.isLoggedIn == null}">
+  <c:set var="originalDestination" value="paintball.jsp" scope="session"/>
+  <c:redirect url="login.jsp"/>
+</c:if>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +45,7 @@
                 >Home</a
               >
               <a
-                href="/PayaraHelloWorld-1.0-SNAPSHOT/paintball.html"
+                href="/PayaraHelloWorld-1.0-SNAPSHOT/paintball.jsp"
                 class="py-4 px-2 text-gray-100 font-semibold "
                 >Paintball</a
               >

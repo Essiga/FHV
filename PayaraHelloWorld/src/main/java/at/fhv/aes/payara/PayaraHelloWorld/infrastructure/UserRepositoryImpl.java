@@ -2,19 +2,32 @@ package at.fhv.aes.payara.PayaraHelloWorld.infrastructure;
 
 import at.fhv.aes.payara.PayaraHelloWorld.domain.User;
 import at.fhv.aes.payara.PayaraHelloWorld.domain.api.UserRepository;
-import org.graalvm.compiler.lir.CompositeValue;
+
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class UserRepositoryImpl implements UserRepository {
-    private List<User> userDatabase = new LinkedList();
 
-    public UserRepositoryImpl() {
+public class UserRepositoryImpl implements UserRepository {
+    private static UserRepository instance;
+
+    public static UserRepositoryImpl getInstance(){
+        if(null == UserRepositoryImpl.instance){
+            new UserRepositoryImpl();
+        }
+        return (UserRepositoryImpl) UserRepositoryImpl.instance;
+    }
+
+    private UserRepositoryImpl(){
+
+        UserRepositoryImpl.instance = this;
         userDatabase.add(new User("test", "test", "user", "pass"));
     }
+
+    private List<User> userDatabase = new LinkedList();
+
 
     public void add(User user){
         userDatabase.add(user);
